@@ -124,7 +124,11 @@ export function useCryptoData(limit: number = 100) {
 
   // Initial fetch
   useEffect(() => {
-    fetchData(false);
+    const timer = setTimeout(() => {
+      void fetchData(false);
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, [fetchData]);
 
   // Background refresh interval

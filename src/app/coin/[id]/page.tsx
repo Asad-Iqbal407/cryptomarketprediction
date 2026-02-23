@@ -11,6 +11,7 @@ import {
   getSignalLabel,
 } from "../../lib/trading";
 import { PriceChart } from "../../components/PriceChart";
+import { StrategyPlaybook } from "../../components/StrategyPlaybook";
 import { formatCurrency, formatCompact, formatPercent } from "../../lib/format";
 
 export default function CoinDetailPage() {
@@ -235,6 +236,8 @@ export default function CoinDetailPage() {
             </div>
           </div>
         </section>
+
+        <StrategyPlaybook coin={coin} />
 
         <div className="back-section">
           <Link href="/" className="back-button">
